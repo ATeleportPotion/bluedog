@@ -1,0 +1,51 @@
+/*作者：罗贤宇*/
+/*日期：2023-12-11*/
+.stage img{
+    width: 20%;
+    height: 20%;
+    position: relative;
+    top: 0;
+    bottom: 0;
+}
+.input-group {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    /*justify-content: space-between;*/
+    max-width:60vh;
+    position: relative;
+    top: 30px;
+    left:  0px;
+    border-bottom: 1px solid rgba(0, 0, 0,1);
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.input-group input[type="number"] {
+    width: 80px;
+    height: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #7a7979;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+.input-group input[type="number"]::placeholder {
+    color: #999; /* 设置占位符文本颜色为灰色 */
+}
+#begin{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 80%;
+}
+#begin img{
+    padding: 10px;
+    position: relative;
+    /*top: 10px;*/
+    /*left: 25px;*/
+    display: flex;
+    align-items: center;
+    width: 10%;
+    height: 10%;
+}

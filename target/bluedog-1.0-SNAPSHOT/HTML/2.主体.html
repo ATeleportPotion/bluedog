@@ -1,0 +1,124 @@
+<!-- 作者：罗贤宇 -->
+<!-- 创建日期：2023-12-10 -->
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>我的文件</title>
+    <link rel="stylesheet" href="../CSS/2.书架.css">
+    <link rel="stylesheet" href="../CSS/2.按钮.css">
+    <link rel="stylesheet" href="../CSS/2.方块.css">
+    <link rel="stylesheet" href="../CSS/2.舞台.css">
+    <link rel="stylesheet" href="../CSS/2.菜单.css">
+    <link rel="stylesheet" href="../CSS/2.移动.css">
+    <script src = "../JS/jquery-3.7.1.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+</head>
+<body>
+    <header>
+        <div class = "logo">
+            <h1 href="#" class="ha">懒狗编程</h1>
+        </div>
+
+        <div class = "tx">
+            <img src="../image/头像.png" alt="用户头像">
+        </div>
+    </header>
+    <div id = "all">
+        <div class="cebianlan1">
+            <div class="menu">
+                <div class="menuHolder">
+                    <div class="menuWindow">
+                        <ul class="p1">
+                            <li class="s1"><a href="#url">代码块<br/>菜单</a>
+                                <ul class="p2">
+                                    <li class="s2"><a href="#"><span>自制</span></a></li>
+                                    <li class="s2"><a href="#url"><span>控制</span></a>
+                                        <ul class="p3 a3">
+                                            <li><a href="#">循环</a></li>
+                                            <li><a href="#">无</a></li>
+                                            <li><a href="#">无</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="s2"><a href="#url"><span>运动</span></a>
+                                        <ul class="p3 a3">
+                                            <li><a href="#" id="moveMenu">移动</a></li>
+                                            <li><a href="#">无</a></li>
+                                            <li><a href="#">无</a></li>
+
+                                        </ul>
+                                    </li>
+                                    <li class="s2"><a href="#url"><span>运算</span></a>
+                                        <ul class="p3 a3">
+                                            <li><a href="#">随机数</a></li>
+                                            <li><a href="#">无</a></li>
+                                            <li><a href="#">无</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="s2"><a href="#url"><span>事件</span></a>
+                                        <ul class="p3 a3">
+                                            <li><a href="#">无</a></li>
+                                            <li><a href="#">无</a></li>
+                                            <li><a href="#">无</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="s2 b6"><a href="#url"><span>外观</span></a>
+                                        <ul class="p3 a3">
+                                            <li><a href="#">无</a></li>
+                                            <li><a href="#">无</a></li>
+                                            <li><a href="#">无</a></li>
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <h2 class="del">删除模式开启</h2>
+        </div>
+
+        <div class = "cebianlan2">
+            <div class = "move">
+                <button class="sci-fi-button" id="placeButton">瞬间移动</button>
+                <button class="sci-fi-button" id="moveButton">平滑移动</button>
+            </div>
+
+            
+
+        </div>
+
+
+        <div class = "gongzuoqu">
+
+            <div class="container">
+
+            </div>
+        </div>
+        <script src="../JS/2.按钮.js"></script>
+        <script src="../JS/2.方块移动.js"></script>
+
+
+
+        <div class = "stage">
+            <div class="obj" >
+                <img id="icon" src="../image/演示.jpg" alt="">
+            </div>
+        </div>
+        <div class = "setting">
+            <div id="begin">
+                <img src="../image/开始.png" alt="">
+            </div>
+            <div class="input-group">
+                <div>当前对象坐标为：x:</div>
+                <input type="number" maxlength="3" id="x" placeholder="X坐标">
+                <div>y:</div>
+                <input type="number" maxlength="3" id="y" placeholder="Y坐标">
+            </div>
+        </div>
+        <script src="../JS/2.舞台.js"></script>
+        <script src="../JS/2.移动.js"></script>
+    </div>
+</body>
+</html>

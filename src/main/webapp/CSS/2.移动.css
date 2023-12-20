@@ -1,0 +1,27 @@
+/*作者：罗贤宇*/
+/*日期：2023-12-10*/
+.obj img{
+    position: relative;
+    animation-play-state: paused;
+    animation-name: moveIcon;
+    animation-duration: var(--animationDuration); /* 移动持续时间，单位秒 */
+    animation-timing-function: linear; /* 匀速动画 */
+}
+:root {
+    --startY:0;
+    --startX:0;
+    --endY: 0;
+    --endX: 0;
+    --animationDuration:0;
+}
+
+@keyframes moveIcon {
+    0% {
+        top: var(--startY); /* 起始 Y 坐标 */
+        left: var(--startX); /* 起始 X 坐标 */
+    }
+    100% {
+        top: var(--endY); /* 结束 Y 坐标 */
+        left: var(--endX); /* 结束 X 坐标 */
+    }
+}

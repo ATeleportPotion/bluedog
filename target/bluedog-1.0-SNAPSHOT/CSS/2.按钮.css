@@ -1,0 +1,42 @@
+/*作者：罗贤宇*/
+/*日期：2023-12-12*/
+.sci-fi-button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    background-color: #4d4d4d;
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.sci-fi-button:hover {
+    background-color: #767676;
+    transform: scale(1.05);
+}
+
+.sci-fi-button:active {
+    background-color: #3d3d3d;
+    transform: scale(0.95);
+}
+
+#placeButton{
+    top: 30px;
+    left: 30px;
+}
+
+#moveButton{
+    top: 30px;
+    left: 50px;
+}
+
+
+.move{
+    display: none;
+}

@@ -1,0 +1,435 @@
+/*作者：罗贤宇*/
+/*日期：2023-12-8*/
+@import url("//unpkg.com/element-ui@2.15.14/lib/theme-chalk/index.css");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "黑体", serif;
+}
+body{
+    height: 100vh;
+    background-color: black;
+    background-image: url('../image/山1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.navbar li{
+    list-style: none;
+}
+.ha{
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+
+}
+.ha:hover{
+    color: #7FB2F0;
+}
+
+/*导航栏设定*/
+
+header{
+    position: relative;
+    padding: 0 2rem;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.navbar{
+    width: 100%;
+    height: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a{
+    font-size:3.5rem;
+    font-weight: bold;
+    text-shadow: #676767 -5px 5px 5px ;
+}
+
+.navbar .links{
+    display: flex;
+    gap: 6rem;
+}
+
+.navbar .toggle_btn{
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.login,.login1{
+    background-color: #7FB2F0;
+    color: white;
+    padding: 0.7rem 3rem;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2s ease;
+}
+
+.login:hover{
+    scale: 1.05;
+    color: white;
+}
+
+.login:active{
+    scale: 0.95;
+}
+
+.login1:hover{
+    scale: 1.05;
+    color: white;
+}
+
+.login1:active{
+    scale: 0.95;
+}
+.login.open{
+    background: none;
+    scale: 0.5;
+}
+
+/*下拉导航栏*/
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 80px;
+    width: 300px;
+    height: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175,0.885,0.32,1.275);
+}
+
+.dropdown_menu.open{
+    height: 250px;
+}
+
+.dropdown_menu .login{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*当页面过小*/
+@media (max-width: 900px) and (min-width: 600px){
+
+    .navbar .links,.navbar .login{
+        display: none;
+    }
+    .navbar .toggle_btn{
+        display: block;
+    }
+    .dropdown_menu{
+        display: block;
+    }
+}
+@media (max-width: 600px) {
+    .navbar .links,.navbar .login{
+        display: none;
+    }
+    .navbar .toggle_btn{
+        display: block;
+    }
+    .dropdown_menu{
+        display: block;
+    }
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+}
+
+button {
+    margin: 20px;
+    font-size: 1.3rem;
+}
+.custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 4px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: absolute;
+    display: inline-block;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+    7px 7px 20px 0px rgba(0,0,0,.1),
+    4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.btn-1 {
+    background: #A4C9FF;
+    background: linear-gradient(0deg, #A4C9FF 0%, #7FB2F0  100%);
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    border: none;
+}
+.btn-1 span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.btn-1:before,
+.btn-1:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    background: #7FB2F0 ;
+    transition: all 0.3s ease;
+}
+.btn-1:before {
+    height: 0%;
+    width: 2px;
+}
+.btn-1:after {
+    width: 0%;
+    height: 2px;
+}
+.btn-1:hover{
+    background: transparent;
+    box-shadow: none;
+}
+.btn-1:hover:before {
+    height: 100%;
+}
+.btn-1:hover:after {
+    width: 100%;
+}
+.btn-1 span:hover{
+    color: #7FB2F0 ;
+}
+.btn-1 span:before,
+.btn-1 span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    background: #7FB2F0 ;
+    transition: all 0.3s ease;
+
+}
+.btn-1 span:before {
+    width: 2px;
+    height: 0;
+}
+.btn-1 span:after {
+    width: 0;
+    height: 2px;
+}
+.btn-1 span:hover:before {
+    height: 100%;
+}
+.btn-1 span:hover:after {
+    width: 100%;
+}
+
+/*登录窗*/
+
+.background{
+    position:absolute;
+    width: 1000px;
+    height: 550px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.8);
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.background.open{
+    display: flex;
+}
+
+.img{
+    width: 700px;
+    height: 550px;
+    background-image: url("../image/山1.jpg");
+    /* 让图片适应大小 */
+    background-size: cover;
+}
+.b{
+    width: 300px;
+    height: 550px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.in{
+    width: 250px;
+    height: 550px;
+}
+.in h1{
+    position: relative;
+    top: 20px;
+    font: 900 35px '';
+}
+.back{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 2.5rem;
+}
+
+.outbox{
+    box-sizing: border-box;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    min-height: 25vh;
+    gap: 30px;
+}
+
+.inputBox{
+    position: relative;
+    width: 250px;
+}
+
+.inputBox input{
+    /*display: none;*/
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(76, 147, 238, 0.6);
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    /*border-bottom: 3px solid rgb(80,80,170);*/
+
+}
+
+.inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    text-transform: uppercase;
+    top: 0;
+    color: rgba(76, 147, 238, 0.6);
+    transition: 0.5s;
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span{
+    /*color: #7FB2F0;*/
+    color: rgba(76, 147, 238, 0.6);
+    transform: translateX(10px)translateY(-7px);
+    font-size: 12px;
+    padding: 0 10px;
+    background: white;
+
+}
+
+.Forget{
+    float: right;
+    margin: 10px 0;
+}
+
+.go{
+    background-color: #7FB2F0;
+    color: white;
+    outline: none;
+    border-style: none;
+    box-shadow: 0 0 8px #000 ;
+    position: absolute;
+    margin: 20px;
+    bottom: 40px;
+    display: block;
+    width: 200px;
+    height: 60px;
+    font-size: 30px;
+    text-decoration: none;
+    line-height: 60px;
+    border-radius: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.go:hover{
+    scale: 1.05;
+}
+
+.go:active{
+    scale: 0.95;
+    box-shadow:none;
+}
+
+#myCheckbox {
+    top: -56px;
+    left: 188px;
+    width: 60px;
+    height: 30px;
+
+    appearance: none;
+    background-color: #bfbfbf;
+    border-radius: 30px;
+    border: 2px solid rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+#myCheckbox::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 26px;
+    width: 26px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: all 0.15s ease-in-out;
+}
+
+#myCheckbox:checked {
+    background-color: #1677ff;
+}
+
+#myCheckbox::before {
+    transition: all 0.15s ease-in-out;
+}
+
+#myCheckbox:checked::before {
+    left: calc(100% - 26px);
+}
+
+label{
+    font-size: 1rem;
+    font-weight: 500;
+    position: relative;
+    top: -65px;
+    left: 37px;
+}
+

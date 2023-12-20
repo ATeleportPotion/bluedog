@@ -1,0 +1,41 @@
+/*作者：罗贤宇*/
+/*日期：2023-12-9*/
+#placeMove {
+    position: absolute;
+    cursor: pointer;
+    width: 220px; /* 设定长方形宽度 */
+    height: 50px; /* 设定长方形高度 */
+    background-color: #ccc; /* 设置背景颜色 */
+    padding: 1px; /* 设置内边距 */
+    box-sizing: border-box; /* 让内边距和边框计入总宽度 */
+    display: flex; /* 使用弹性盒子布局 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    border-radius: 5px;
+    /*display: none;*/
+}
+
+#smoothMove {
+    position: absolute;
+    cursor: pointer;
+    width: 320px; /* 设定长方形宽度 */
+    height: 50px; /* 设定长方形高度 */
+    background-color: #ccc; /* 设置背景颜色 */
+    padding: 1px; /* 设置内边距 */
+    box-sizing: border-box; /* 让内边距和边框计入总宽度 */
+    display: flex; /* 使用弹性盒子布局 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    border-radius: 5px;
+    /*display: none;*/
+}
+
+input {
+    width: 30px; /* 设定输入框宽度为两个字符的宽度 */
+    margin: 0 8px; /* 设置输入框之间的间距 */
+}
+
+p {
+    font-size: 16px; /* 设置文字大小 */
+    text-align: center; /* 水平居中 */
+}
